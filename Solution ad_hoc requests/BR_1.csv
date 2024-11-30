@@ -1,3 +1,5 @@
+# Business Request 1: City Level Fare and Trip Distribution
+
 City,Total_Trips,Avg_Fare_Per_Km,Avg_Fare_Per_Trip,Contribution_To_Total_Trips_Percentage
 Jaipur,76888,16.25218302,483.9181,18.05294
 Lucknow,64299,12.14309269,147.1804,15.09710
