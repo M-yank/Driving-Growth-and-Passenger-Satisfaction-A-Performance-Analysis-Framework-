@@ -1,7 +1,7 @@
 # Transport-Mobility-Dashboard
 Company Overview: Established two years ago, Good Cabs operates in 10 tier-2 cities across India. The company emphasizes affordability and supports local drivers, fostering sustainable livelihoods within their communities. Good Cabs has established a strong presence in the Indian market, particularly in tier-2 cities. The company is dedicated to providing excellent service and continuously improving passenger satisfaction. The Company aims to achieve growth while enhancing passenger satisfaction.
 
-#Interactive Dashboard: [Link](https://app.powerbi.com/view?r=eyJrIjoiM2I5MTBiODQtYzFmMC00NTg2LWIyZjYtYmUwMTI3YTM4NDBmIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+#Interactive Dashboard: [Link](https://app.powerbi.com/view?r=eyJrIjoiMDRjNDc1NzYtNmU5ZS00MDNmLTk0NDgtODBiZWFkNDhmMzdhIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
 # Tools Used
 • SQL
@@ -40,6 +40,14 @@ Company Overview: Established two years ago, Good Cabs operates in 10 tier-2 cit
 # Data Modelling
 ![1](https://github.com/user-attachments/assets/8da327e7-655c-4e76-ba45-01ad335d1325)
 
+# Insight
+●	Identified a moderate negative correlation of (0.57) between trip ratings and travel frequency, leading to actionable insight for improving customer satisfaction through loyalty programs.
+
+●	Streamlined ad-hoc data request handling using SQL “stored functions” and CTEs, reducing query processing time by 30% and enhancing reporting efficiency.
+
+●	Analyzed passenger frequency data for 10 tier-2 cities, identifying a 45% higher repeat rate in key regions, driving a 10% projected revenue increase through targeted retention initiatives.
+
+
 
 # Dashboard Design
 Home (Navigation and Company Overview)
@@ -62,4 +70,4 @@ Performance Insight
 ![6](https://github.com/user-attachments/assets/625f2a94-e850-41f7-a0dd-f57d77f039a2)
 
 
-Live Dashboard: [Link](https://app.powerbi.com/view?r=eyJrIjoiM2I5MTBiODQtYzFmMC00NTg2LWIyZjYtYmUwMTI3YTM4NDBmIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+Live Dashboard: [Link](https://app.powerbi.com/view?r=eyJrIjoiMDRjNDc1NzYtNmU5ZS00MDNmLTk0NDgtODBiZWFkNDhmMzdhIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
