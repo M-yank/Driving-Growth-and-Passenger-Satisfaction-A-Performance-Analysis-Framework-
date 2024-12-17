@@ -39,67 +39,53 @@ ORDER BY
     Total_Trips DESC;
     
     #Business Request 2
-WITH ActualTrips AS (
-    
+WITH actual_trips_cte AS (
+    -- Calculate actual trips grouped by city and month
     SELECT 
         dc.city_name,
+        dd.month_name,
         dd.start_of_month,
         COUNT(ft.trip_id) AS actual_trips,
         ft.city_id
     FROM 
         trips_db.fact_trips ft
     JOIN 
-        trips_db.dim_date dd 
-    ON 
-        ft.date = dd.date
+        trips_db.dim_city dc ON ft.city_id = dc.city_id
     JOIN 
-        trips_db.dim_city dc
-    ON 
-        ft.city_id = dc.city_id
+        trips_db.dim_date dd ON ft.date = dd.date
     GROUP BY 
-        dc.city_name, dd.start_of_month, ft.city_id
+        dc.city_name, dd.month_name, dd.start_of_month, ft.city_id
 ),
-TargetTrips AS (
-
+target_trips_cte AS (
+    -- Retrieve target trips from the targets_db
     SELECT 
-        mt.city_id,
-        mt.month AS start_of_month,
-        mt.total_target_trips
+        city_id,
+        month AS start_of_month, 
+        total_target_trips
     FROM 
-        targets_db.monthly_target_trips mt
-),
-PerformanceReport AS (
-  
-    SELECT 
-        at.city_name,
-        at.city_id,
-        SUM(at.actual_trips) AS actual_trips,
-        SUM(tt.total_target_trips) AS total_target_trips,
-        CASE 
-            WHEN SUM(at.actual_trips) > SUM(tt.total_target_trips) THEN 'Above Target'
-            ELSE 'Below Target'
-        END AS overall_performance_status,
-        AVG((at.actual_trips - tt.total_target_trips) * 100.0 / tt.total_target_trips) AS avg_percent_difference
-    FROM 
-        ActualTrips at
-    LEFT JOIN 
-        TargetTrips tt
-    ON 
-        at.city_id = tt.city_id AND at.start_of_month = tt.start_of_month
-    GROUP BY 
-        at.city_name, at.city_id
+        targets_db.monthly_target_trips
 )
-
 SELECT 
-    city_name,
-    actual_trips,
-    total_target_trips,
-    overall_performance_status,
-    ROUND(avg_percent_difference, 2) AS avg_percent_difference
+    atc.city_name,
+    atc.month_name,
+    atc.actual_trips,
+    ttc.total_target_trips,
+    CASE 
+        WHEN atc.actual_trips > ttc.total_target_trips THEN 'Above Target'
+        ELSE 'Below Target'
+    END AS performance_status,
+    ROUND(
+        ((atc.actual_trips - ttc.total_target_trips) * 100.0) / ttc.total_target_trips, 2
+    ) AS percentage_difference
 FROM 
-    PerformanceReport
+    actual_trips_cte atc
+JOIN 
+    target_trips_cte ttc 
+ON 
+    atc.city_id = ttc.city_id AND atc.start_of_month = ttc.start_of_month
 ORDER BY 
-    city_name;
+    atc.city_name, atc.start_of_month;
+
 
 
 #Business Request 3
