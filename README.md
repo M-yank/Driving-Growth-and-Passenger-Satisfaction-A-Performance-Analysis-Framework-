@@ -1,7 +1,7 @@
 # Transport-Mobility-Dashboard
 Company Overview: Established two years ago, Good Cabs operates in 10 tier-2 cities across India. The company emphasizes affordability and supports local drivers, fostering sustainable livelihoods within their communities. Good Cabs has established a strong presence in the Indian market, particularly in tier-2 cities. The company is dedicated to providing excellent service and continuously improving passenger satisfaction. The Company aims to achieve growth while enhancing passenger satisfaction.
 
-#Interactive Dashboard: [Link](https://app.powerbi.com/view?r=eyJrIjoiMDRjNDc1NzYtNmU5ZS00MDNmLTk0NDgtODBiZWFkNDhmMzdhIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+#Interactive Dashboard: [Link](https://app.powerbi.com/view?r=eyJrIjoiMzk0ZjlmMmYtNTFkYS00NGE5LWI5ZmEtZWYzM2M1YTlkMzYyIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9&pageName=b248a976610d71617e87)
 
 # Tools Used
 • SQL
@@ -70,4 +70,4 @@ Performance Insight
 ![6](https://github.com/user-attachments/assets/625f2a94-e850-41f7-a0dd-f57d77f039a2)
 
 
-Live Dashboard: [Link](https://app.powerbi.com/view?r=eyJrIjoiMDRjNDc1NzYtNmU5ZS00MDNmLTk0NDgtODBiZWFkNDhmMzdhIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+Live Dashboard: [Link](https://app.powerbi.com/view?r=eyJrIjoiMzk0ZjlmMmYtNTFkYS00NGE5LWI5ZmEtZWYzM2M1YTlkMzYyIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9&pageName=b248a976610d71617e87)
